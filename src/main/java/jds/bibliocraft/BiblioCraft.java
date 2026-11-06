@@ -5,6 +5,7 @@ import jds.bibliocraft.bibliowoods.botania.BiblioWoodsBotania;
 import jds.bibliocraft.bibliowoods.extrabiometravels.BiblioWoodsEBT;
 import jds.bibliocraft.bibliowoods.forestry.BiblioWoodsForestry;
 import jds.bibliocraft.bibliowoods.natura.BiblioWoodsNatura;
+import jds.bibliocraft.bibliowoods.twilightforest.BiblioWoodsTF;
 import jds.bibliocraft.enchantments.EnchantmentDeathCompass;
 import jds.bibliocraft.enchantments.EnchantmentReading;
 import jds.bibliocraft.entity.EntitySeat;
@@ -174,6 +175,8 @@ public class BiblioCraft
 				BiblioWoodsNatura.init();
 			if (Config.enableBiblioWoodsEBT)
 				BiblioWoodsEBT.init();
+			if (Config.enableBiblioWoodsTF)
+				BiblioWoodsTF.init();
 			ItemLoader.addRecipies(event);
 		}
 		

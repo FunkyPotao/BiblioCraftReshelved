@@ -17,60 +17,57 @@ public class BiblioWoodsTF {
     {
 
 
+
+
         if (Loader.isModLoaded("twilightforest"))
         {
 
             Block[] TFPlanks =  {
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:autumnal_planks")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:bald_cypress_planks")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:cypress_planks")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:douglas_fir_planks")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:japanese_maple_planks")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:peach_sakura_planks")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:rainbow_eucalyptus_planks")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:scalewood_planks")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:wattle_planks")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:white_fir_planks"))
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:tower_wood")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:canopy_planks")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:mangrove_planks")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:dark_planks")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:time_planks")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:trans_planks")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:mine_planks")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:sort_planks"))
             };
 
             Block[] TFSlabs =  {
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:autumnal_slab")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:bald_cypress_slab")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:cypress_slab")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:douglas_fir_slab")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:japanese_maple_slab")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:peach_sakura_slab")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:rainbow_eucalyptus_slab")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:scalewood_slab")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:wattle_slab")),
-                    Block.REGISTRY.getObject(new ResourceLocation("ebt:white_fir_slab"))
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:tower_slab")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:canopy_slab")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:mangrove_slab")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:dark_slab")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:time_slab")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:trans_slab")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:mine_slab")),
+                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:sort_slab"))
             };
 
-            for (int i = 0; i < EBTPlanks.length; i++)
-                if (EBTPlanks[i] == null || EBTSlabs[i] == null) return;
+            for (int i = 0; i < TFPlanks.length; i++)
+                if (TFPlanks[i] == null || TFSlabs[i] == null) return;
 
+            //twilight forest actually has multiple texture variants but idk how one could implement that randomization
             String[] textures = {
-                    "ebt:blocks/autumnal_planks",
-                    "ebt:blocks/bald_cypress_planks",
-                    "ebt:blocks/cypress_planks",
-                    "ebt:blocks/douglas_fir_planks",
-                    "ebt:blocks/japanese_maple_planks",
-                    "ebt:blocks/peach_sakura_planks",
-                    "ebt:blocks/rainbow_eucalyptus_planks",
-                    "ebt:blocks/scalewood_planks",
-                    "ebt:blocks/wattle_planks",
-                    "ebt:blocks/white_fir_planks",
+                    "twilightforest:blocks/towerwood_planks",
+                    "twilightforest:blocks/wood/planks_canopy_0",
+                    "twilightforest:blocks/wood/planks_mangrove_0",
+                    "twilightforest:blocks/wood/planks_darkwood_0",
+                    "twilightforest:blocks/wood/planks_time_0",
+                    "twilightforest:blocks/wood/planks_trans_0",
+                    "twilightforest:blocks/wood/planks_mine_0",
+                    "twilightforest:blocks/wood/planks_sort_0"
             };
 
             ItemStack icon = new ItemStack(BlockBookcase.instance, 1, 6);
             NBTTagCompound tags = new NBTTagCompound();
-            tags.setString("renderTexture", "ebt:blocks/autumnal_planks");
+            tags.setString("renderTexture", "twilightforest:blocks/wood/planks_canopy_0");
             icon.setTagCompound(tags);
-            creativeTab = new BiblioWoodHelperTab("bibliowoodebttab", textures, icon);
+            creativeTab = new BiblioWoodHelperTab("bibliowoodtftab", textures, icon);
             for (int i = 0; i < textures.length; i++)
             {
                 RegisterCustomFramedBlocks reg = new RegisterCustomFramedBlocks(textures[i]);
-                reg.registerRecipies(new ItemStack(EBTPlanks[i], 1), new ItemStack(EBTSlabs[i], 1));
+                reg.registerRecipies(new ItemStack(TFPlanks[i], 1), new ItemStack(TFSlabs[i], 1));
             }
 
         }
