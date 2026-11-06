@@ -16,9 +16,6 @@ public class BiblioWoodsTF {
     public static void init()
     {
 
-
-
-
         if (Loader.isModLoaded("twilightforest"))
         {
 

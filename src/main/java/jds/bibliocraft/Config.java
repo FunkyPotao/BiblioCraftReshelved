@@ -93,6 +93,8 @@ public class Config
 	public static boolean enableBiblioWoodsBotania;
 	public static boolean enableBiblioWoodsBoP;
 	public static boolean enableBiblioWoodsTF;
+	public static boolean enableBiblioWoodsBN;
+	public static boolean enableBiblioWoodsTraverse;
 	public static boolean enableClipboardInterfacePausing;
 	public static boolean enableRecipeBookCrafting;
 	public static boolean enablePublicTypesettingBooks;
@@ -171,6 +173,8 @@ public class Config
 		enableBiblioWoodsBotania = bConfig.get("BiblioWoods", "EnableBotania", true, "Enable BiblioWoods compatibility with Botania. Requires restart.").getBoolean(true);
 		enableBiblioWoodsBoP = bConfig.get("BiblioWoods", "EnableBiomesOPlenty", true, "Enable BiblioWoods compatibility with Biomes O' Plenty. Requires restart.").getBoolean(true);
 		enableBiblioWoodsTF = bConfig.get("BiblioWoods", "EnableTwilightForest", true, "Enable BiblioWoods compatibility with Twilight Forest. Requires restart.").getBoolean(true);
+		enableBiblioWoodsBN = bConfig.get("BiblioWoods", "EnableBetterNether", true, "Enable BiblioWoods compatibility with Better Nether. Requires restart.").getBoolean(true);
+		enableBiblioWoodsTraverse = bConfig.get("BiblioWoods", "EnableTraverse", true, "Enable BiblioWoods compatibility with Traverse. Requires restart.").getBoolean(true);
 
 		enableClipboardInterfacePausing = bConfig.get(Configuration.CATEGORY_GENERAL,  "EnableClipboardInterfacePausing", true, "This option enables the clipboard to pause the game when its interface is open.").getBoolean(true);
 		enableRecipeBookCrafting = bConfig.get(Configuration.CATEGORY_GENERAL,  "EnableCraftingWithRecipieBooks", true, "This option enables crafting to be done inside a recipe book with no workbench.").getBoolean(true);

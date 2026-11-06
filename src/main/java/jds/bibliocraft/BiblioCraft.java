@@ -1,10 +1,12 @@
 package jds.bibliocraft;
 
+import jds.bibliocraft.bibliowoods.betternether.BiblioWoodsBN;
 import jds.bibliocraft.bibliowoods.bop.BiblioWoodsBoP;
 import jds.bibliocraft.bibliowoods.botania.BiblioWoodsBotania;
 import jds.bibliocraft.bibliowoods.extrabiometravels.BiblioWoodsEBT;
 import jds.bibliocraft.bibliowoods.forestry.BiblioWoodsForestry;
 import jds.bibliocraft.bibliowoods.natura.BiblioWoodsNatura;
+import jds.bibliocraft.bibliowoods.traverse.BiblioWoodsTraverse;
 import jds.bibliocraft.bibliowoods.twilightforest.BiblioWoodsTF;
 import jds.bibliocraft.enchantments.EnchantmentDeathCompass;
 import jds.bibliocraft.enchantments.EnchantmentReading;
@@ -177,6 +179,10 @@ public class BiblioCraft
 				BiblioWoodsEBT.init();
 			if (Config.enableBiblioWoodsTF)
 				BiblioWoodsTF.init();
+			if (Config.enableBiblioWoodsBN)
+				BiblioWoodsBN.init();
+			if (Config.enableBiblioWoodsTraverse)
+				BiblioWoodsTraverse.init();
 			ItemLoader.addRecipies(event);
 		}
 		
