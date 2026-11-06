@@ -10,13 +10,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class BiblioWoodsEBT {
     public static CreativeTabs creativeTab;
-
-    public static final Logger LOGGER = LogManager.getLogger("reshelved");
 
     public static void init()
     {
@@ -51,17 +47,11 @@ public class BiblioWoodsEBT {
                     Block.REGISTRY.getObject(new ResourceLocation("ebt:white_fir_slab"))
             };
 
-            //if (planks1 == null || planks2 == null || slabs1 == null || slabs2 == null || slabs3 == null) return;
 
             for (int i = 0; i < EBTPlanks.length; i++)
                 if (EBTPlanks[i] == null || EBTSlabs[i] == null) return;
 
-            /*
-            Block[] planks = {planks1, planks1, planks1, planks1, planks1, planks1, planks1, planks1, planks1, planks2, planks2, planks2, planks2};
-            int[] plankID = {0,1,2,3,4,5,6,7,8,0,1,2,3};
-            Block[] slabs = {slabs1, slabs1, slabs1, slabs1, slabs1, slabs2, slabs2, slabs2, slabs2, slabs3, slabs3, slabs3, slabs3};
-            int[] slabID = {0,1,2,3,4,0,1,2,3,0,1,2,3};
-            */
+
             String[] textures = {
                     "ebt:blocks/autumnal_planks",
                     "ebt:blocks/bald_cypress_planks",
