@@ -21,7 +21,7 @@ public class BiblioWoodsTraverse {
 
             Block Plank = Block.REGISTRY.getObject(new ResourceLocation("traverse:fir_plank"));
             Block Slab = Block.REGISTRY.getObject(new ResourceLocation("traverse:fir_slab"));
-            String[] Texture = { "traverse:block/planks/fir_planks.png" };
+            String[] Texture = { "traverse:block/planks/fir_planks" };
 
             ItemStack icon = new ItemStack(BlockBookcase.instance, 1, 6);
             NBTTagCompound tags = new NBTTagCompound();
