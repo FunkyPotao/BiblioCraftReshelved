@@ -21,6 +21,9 @@ public class BiblioWoodsBN {
 
             Block Plank = Block.REGISTRY.getObject(new ResourceLocation("betternether:stalagnate_planks"));
             Block Slab = Block.REGISTRY.getObject(new ResourceLocation("betternether:stalagnate_planks_slab_half"));
+
+            if (Plank == null || Slab == null) return;
+
             String[] Texture = { "betternether:blocks/stalagnate_planks" };
 
             ItemStack icon = new ItemStack(BlockBookcase.instance, 1, 6);
@@ -28,6 +31,9 @@ public class BiblioWoodsBN {
             tags.setString("renderTexture", Texture[0]);
             icon.setTagCompound(tags);
             creativeTab = new BiblioWoodHelperTab("bibliowoodbntab", Texture, icon);
+
+            RegisterCustomFramedBlocks reg = new RegisterCustomFramedBlocks(Texture[0]);
+            reg.registerRecipies(new ItemStack(Plank, 1), new ItemStack(Slab, 1));
         }
     }
 

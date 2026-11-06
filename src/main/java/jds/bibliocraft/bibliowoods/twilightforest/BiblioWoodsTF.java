@@ -20,7 +20,7 @@ public class BiblioWoodsTF {
         {
 
             Block[] TFPlanks =  {
-                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:tower_wood")),
+                    //Block.REGISTRY.getObject(new ResourceLocation("twilightforest:tower_wood")),
                     Block.REGISTRY.getObject(new ResourceLocation("twilightforest:canopy_planks")),
                     Block.REGISTRY.getObject(new ResourceLocation("twilightforest:mangrove_planks")),
                     Block.REGISTRY.getObject(new ResourceLocation("twilightforest:dark_planks")),
@@ -31,7 +31,7 @@ public class BiblioWoodsTF {
             };
 
             Block[] TFSlabs =  {
-                    Block.REGISTRY.getObject(new ResourceLocation("twilightforest:tower_slab")),
+                    //Block.REGISTRY.getObject(new ResourceLocation("twilightforest:tower_slab")),
                     Block.REGISTRY.getObject(new ResourceLocation("twilightforest:canopy_slab")),
                     Block.REGISTRY.getObject(new ResourceLocation("twilightforest:mangrove_slab")),
                     Block.REGISTRY.getObject(new ResourceLocation("twilightforest:dark_slab")),
@@ -46,7 +46,7 @@ public class BiblioWoodsTF {
 
             //twilight forest actually has multiple texture variants but idk how one could implement that randomization
             String[] textures = {
-                    "twilightforest:blocks/towerwood_planks",
+                    //"twilightforest:blocks/towerwood_planks", towerwood doesnt have a slab variant, skip
                     "twilightforest:blocks/wood/planks_canopy_0",
                     "twilightforest:blocks/wood/planks_mangrove_0",
                     "twilightforest:blocks/wood/planks_darkwood_0",
